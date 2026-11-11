@@ -1,0 +1,70 @@
+:root {
+  --barva-text: #1d2b36;
+  --barva-pozadi: #ffffff;
+  --barva-akcent: #1f6f8b;
+  --barva-okraj: #d5dde3;
+  --vyska-hlavicky: 56px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color: var(--barva-text);
+}
+
+.hlavicka {
+  height: var(--vyska-hlavicky);
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0 1rem;
+  background: var(--barva-pozadi);
+  border-bottom: 1px solid var(--barva-okraj);
+}
+
+.hlavicka h1 {
+  margin: 0;
+  align-self: center;
+  font-size: 1.15rem;
+  font-weight: 650;
+}
+
+.hlavicka p {
+  margin: 0;
+  align-self: center;
+  font-size: 0.9rem;
+  color: #5b6b78;
+}
+
+#mapa {
+  height: calc(100% - var(--vyska-hlavicky));
+  width: 100%;
+}
+
+/* Popup */
+.popup h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.05rem;
+  color: var(--barva-akcent);
+}
+
+.popup p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.popup small {
+  display: block;
+  margin-top: 0.5rem;
+  color: #7a8894;
+}
+
+.leaflet-container a:focus-visible,
+.leaflet-container button:focus-visible {
+  outline: 2px solid var(--barva-akcent);
+  outline-offset: 2px;
+}
