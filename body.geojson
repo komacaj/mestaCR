@@ -6,27 +6,36 @@
       "properties": {
         "id": 1,
         "nazev": "Olomouc",
-        "popisek": "Historické město na řece Moravě, sídlo Univerzity Palackého a Sloupu Nejsvětější Trojice (UNESCO)."
+        "popisek": "Historické město na Moravě, sídlo Olomouckého kraje. Známé Sloupem Nejsvětější Trojice, který je zapsán na seznamu UNESCO."
       },
-      "geometry": { "type": "Point", "coordinates": [17.2509, 49.5938] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [17.2509, 49.5938]
+      }
     },
     {
       "type": "Feature",
       "properties": {
         "id": 2,
         "nazev": "Praha",
-        "popisek": "Hlavní město České republiky na řece Vltavě, s Pražským hradem a Karlovým mostem."
+        "popisek": "Hlavní město České republiky na řece Vltavě. Nejlidnatější město země a sídlo Pražského hradu."
       },
-      "geometry": { "type": "Point", "coordinates": [14.4378, 50.0755] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [14.4378, 50.0755]
+      }
     },
     {
       "type": "Feature",
       "properties": {
         "id": 3,
-        "nazev": "Brno",
-        "popisek": "Druhé největší město ČR, metropole Jihomoravského kraje s hradem Špilberk a vilou Tugendhat (UNESCO)."
+        "nazev": "Hvozd",
+        "popisek": "Obec v okrese Prostějov v Olomouckém kraji."
       },
-      "geometry": { "type": "Point", "coordinates": [16.6068, 49.1951] }
+      "geometry": {
+        "type": "Point",
+        "coordinates": [16.99, 49.50]
+      }
     }
   ]
 }
