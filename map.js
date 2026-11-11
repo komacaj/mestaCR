@@ -11,10 +11,40 @@ const HRANICE_CR = [[48.55, 12.09], [51.06, 18.86]];
 const mapa = L.map("mapa").fitBounds(HRANICE_CR);
 
 // Podkladová mapa
-L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+const osm = L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
   maxZoom: 19,
-  attribution:
-    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+});
+
+const svetla = L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+  subdomains: "abcd",
+  maxZoom: 20,
+  attribution: '&copy; OpenStreetMap, &copy; <a href="https://carto.com/attributions">CARTO</a>'
+});
+
+const topo = L.tileLayer("https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png", {
+  subdomains: "abc",
+  maxZoom: 17,
+  attribution: '&copy; OpenStreetMap, SRTM | &copy; <a href="https://opentopomap.org">OpenTopoMap</a>'
+});
+
+const satelit = L.tileLayer(
+  "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+  {
+    maxZoom: 19,
+    attribution: "Tiles &copy; Esri"
+  }
+);
+
+// Výchozí vrstva
+svetla.addTo(mapa);
+
+// Přepínač vrstev
+L.control.layers({
+  "Světlá": svetla,
+  "OpenStreetMap": osm,
+  "Topografická": topo,
+  "Satelit": satelit
 }).addTo(mapa);
 
 // Vytvoří obsah popupu přes DOM (bezpečné proti vložení HTML z dat)
